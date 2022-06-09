@@ -71,6 +71,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-eg-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/09/eg-1/" class="article-date">
+  <time class="dt-published" datetime="2022-06-09T06:19:59.000Z" itemprop="datePublished">2022-06-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA/">C++中的随机</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/09/eg-1/">eg.1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="1-C-rand-用法"><a href="#1-C-rand-用法" class="headerlink" title="1.C++rand()用法"></a>1.C++rand()用法</h4><p>1.rand()函数存在于&lt;stdlib.h&gt;头文件中</p>
+<p>2.是一个无参内置函数，作用是随机产生0 - (N - 1)之间的数。</p>
+<p>3.例如：我们要随机在一个0~9的随机数 int num &#x3D; rand()%10; (左开右闭)</p>
+<p>难道随机的只能是从0开始吗？(是，但我们可以在随机产生的数后面加上一个数，就可以按照我们的想法来取区间)</p>
+<p>例如：我们需要取5<del>13的随机数，我们可以产生一个从0</del>8的随机区间，然后在这个随机区间后面加上5就是5~13的了。</p>
+<p>int num &#x3D; rand()%9 + 5;</p>
+<p>一定要注意，我们rand()后面那个数是[0,num)，取不到最后一个数的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/06/09/eg-1/" data-id="cl46nooqn00011gtt94076f9r" data-title="eg.1" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/09/hello-world/" class="article-date">
@@ -110,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/09/hello-world/" data-id="cl46iuebm00007sttdv6w4zue" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/09/hello-world/" data-id="cl46nooqj00001gttb5pc1a3w" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -129,12 +180,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-%E4%B8%AD%E7%9A%84%E9%9A%8F%E6%9C%BA/">C++中的随机</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -151,6 +223,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/06/09/eg-1/">eg.1</a>
+          </li>
         
           <li>
             <a href="/2022/06/09/hello-world/">Hello World</a>
