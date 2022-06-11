@@ -100,25 +100,15 @@
         <h3 id="关于哈希表的一种数据结构—std-unordered-set"><a href="#关于哈希表的一种数据结构—std-unordered-set" class="headerlink" title="关于哈希表的一种数据结构—std::unordered_set"></a>关于哈希表的一种数据结构—std::unordered_set</h3><p>首先，我们从上篇文章了解到，unordered_set的底层实现是哈希表，它是无序的，不可重复的，不可更改数值的，并且查找效率</p>
 <p>和增删效率都是O(1)。</p>
 <p>主要介绍unordered_set的几种成员方法。</p>
-<h4 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h4><p>C++11为STL标准库增添了4中无序哈希容器，其中就有unordered_set容器。</p>
-<p>unordered_set容器可直译为”无序set容器”，即unordered_set容器和set容器很像，唯一的区别就在于set容器会自行对存储的数据</p>
-<p>进行排序，而unordered_set容器不会。</p>
-<h4 id="2-特性"><a href="#2-特性" class="headerlink" title="2.特性"></a>2.特性</h4><p>1.不再以键值对的形式存储数据，而是直接存储数据的值。</p>
-<p>2.容器内部存储的各个元素的值都不相等，且不能被修改。</p>
-<p>3.不会对内部存储的数据进行排序(这和该容器底层采用哈希表结构存储数据有关)。</p>
-<h4 id="3-使用该容器的条件"><a href="#3-使用该容器的条件" class="headerlink" title="3.使用该容器的条件"></a>3.使用该容器的条件</h4><p>另外，实现unordered_set容器的模板定义在<unordered_set>头文件，并位于std命名空间中。这意味着，如果程序中需要使用该类型</p>
-<p>容器，则首先应该包含如下代码</p>
-<p>#include<unordered_set></p>
-<p>using namespace std;</p>
-<h4 id="4-成员函数"><a href="#4-成员函数" class="headerlink" title="4.成员函数"></a>4.成员函数</h4><p>1.unordered_set.find(key);  <strong>查找值为key的元素，如果找到，就返回该元素的正向迭代器。反之，则返回结束迭代器。</strong></p>
-<p>2.unordered_set.end();  <strong>直接返回尾后迭代器，即指向容器最后一个数据单元 + 1的指针。</strong></p>
-<p>3.unordered_set<int> result;  <strong>定义哈希表存放结果。</strong></p>
-<p>4.unordered_set<int>result(nums1.begin(),nums2.begin());  <strong>实现功能：去除重复的元素</strong>。 <strong>[1,2,2,1] -&gt; [1,2,1]</strong></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2022/06/11/%E5%93%88%E5%B8%8C%E8%A1%A8-unordered-set/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/11/%E5%93%88%E5%B8%8C%E8%A1%A8-unordered-set/" data-id="cl49ij3f00001e4ttfgn66hcs" data-title="哈希表-unordered_set" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/11/%E5%93%88%E5%B8%8C%E8%A1%A8-unordered-set/" data-id="cl49impc10002pkttbign33sb" data-title="哈希表-unordered_set" class="article-share-link">Share</a>
       
       
       
@@ -175,7 +165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%93%88%E5%B8%8C%E8%A1%A8/" data-id="cl49ij3fa000fe4ttfnot0kzq" data-title="数据结构与算法-哈希表" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%93%88%E5%B8%8C%E8%A1%A8/" data-id="cl49impc50005pktt2lm202hm" data-title="数据结构与算法-哈希表" class="article-share-link">Share</a>
       
       
       
@@ -236,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/09/eg-1/" data-id="cl49ij3ew0000e4tta2svbzva" data-title="eg.1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/09/eg-1/" data-id="cl49impbz0001pkttb2v12fau" data-title="eg.1" class="article-share-link">Share</a>
       
       
       
@@ -289,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/09/hello-world/" data-id="cl49ij3f30004e4tt48s6bh0o" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/09/hello-world/" data-id="cl49impbu0000pktt2f4bhv6l" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
