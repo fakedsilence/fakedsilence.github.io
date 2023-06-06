@@ -1,407 +1,208 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>白日梦大师</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="这是描述">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>白日梦大师 - 这是副标题</title><meta name="author" content="白日梦大师"><meta name="copyright" content="白日梦大师"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这是描述">
 <meta property="og:type" content="website">
 <meta property="og:title" content="白日梦大师">
 <meta property="og:url" content="https://fakedsilence.github.io/index.html">
 <meta property="og:site_name" content="白日梦大师">
 <meta property="og:description" content="这是描述">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="白日梦大师">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://fakedsilence.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '白日梦大师',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-06-06 21:05:47'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="白日梦大师" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">白日梦大师</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">这是副标题</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fakedsilence.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-unity02" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/11/06/unity02/" class="article-date">
-  <time class="dt-published" datetime="2022-11-06T11:03:39.000Z" itemprop="datePublished">2022-11-06</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/11/06/unity02/">unity02</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="面向对象-Object-Oriented"><a href="#面向对象-Object-Oriented" class="headerlink" title="面向对象 Object Oriented"></a>面向对象 Object Oriented</h1><h2 id="·概述"><a href="#·概述" class="headerlink" title="·概述"></a>·概述</h2><p><strong>面向过程的程序 &#x3D; 算法 + 数据结构</strong>； <strong>关心解决问题的步骤</strong>！</p>
-<p><strong>面向对象：关心谁在做什么。</strong></p>
-<p><strong>从设计角度讲：先有对象，再有类。 从编码角度讲：先有类，再有对象。</strong></p>
-<p>**类 class 脚本 抽象的概念 “类别”**。</p>
-<p><strong>对象 具体的实例 个体</strong>。</p>
-<h2 id="·主要思想"><a href="#·主要思想" class="headerlink" title="·主要思想"></a>·主要思想</h2><h3 id="分而治之"><a href="#分而治之" class="headerlink" title="分而治之"></a>分而治之</h3><p><strong>将一个大的需求分解为许多类，每个类处理一个独立的模块。</strong></p>
-<p><strong>拆分好处：独立模块便于分工，每个模块便于复用，可拓展性强。</strong></p>
-<h3 id="封装变化"><a href="#封装变化" class="headerlink" title="封装变化"></a>封装变化</h3><p><strong>变化的地方独立封装，避免影响其他模块。</strong></p>
-<h3 id="高内聚"><a href="#高内聚" class="headerlink" title="高内聚"></a>高内聚</h3><p><strong>类中的各个方法都在完成一项任务(单一职责的类)</strong></p>
-<p><strong>复杂的实现封装在内部，对外提供简单的调用。</strong></p>
-<h3 id="低耦合"><a href="#低耦合" class="headerlink" title="低耦合"></a>低耦合</h3><p><strong>类与类的关联性依赖度要低(每个类独立)。</strong></p>
-<p><strong>让一个模块的改变，尽少影响其他模块。</strong></p>
-<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><p><strong>高复用性、高扩展性、高维护性、高移植性</strong></p>
-<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p><strong>1.数据角度讲，将一些基本数据类型复合成一个自定义类型。</strong></p>
-<p><strong>2.方法角度讲，向类外提供功能，隐藏实现的细节。</strong></p>
-<p><strong>3.设计角度讲，分而治之，高耦合低内聚，封装变化</strong>。</p>
-<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p><strong>1.松散耦合，降低了程序各部分之间的依赖性。</strong></p>
-<p><strong>2.简化编程，使用者不必了解具体的实现细节，只需要调用对外提供的功能。</strong></p>
-<p><strong>3.增强安全性，以特定的访问权限来使用类成员，保护成员不被意外修改。</strong></p>
-<h3 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h3><p><strong>1.private:私有的，类成员默认级别，仅在类内部可见。</strong></p>
-<p><strong>2.internal:内部的，类默认级别，仅在程序集内可见。</strong></p>
-<p><strong>3.protected:受保护的，类内部与派生类中可见。</strong></p>
-<p><strong>4.protected internal:意为 internal 或 protected;程序集内或者派生类中可见。</strong></p>
-<p><strong>5.public:公有的，类内外都可见。</strong></p>
-<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p><strong>语法：</strong></p>
-<p><strong>用abstract修饰类即为抽象类。</strong></p>
-<p><strong>抽象类中可能包含抽象成员(方法，属性)。</strong></p>
-<p><strong>抽象类不能创建对象。</strong></p>
-<p><strong>语义：</strong></p>
-<p><strong>表示一个概念的抽象(可以存储子类直接使用的成员)。</strong></p>
-<p><strong>只表示做什么，拥有什么数据，但往往不表达具体做法。</strong></p>
-<p><strong>适用性：</strong></p>
-<p><strong>1.当有行为，但是不需要实现的时候。</strong></p>
-<p><strong>2.当有一些行为，在做法上有多种可能时，但又不希望客户了解具体做法。</strong></p>
-<p><strong>3.不希望类创建时。</strong></p>
-<p><strong>抽象类和普通类区别：</strong></p>
-<p><strong>相同：都可以有静态、实例成员(数据、方法、构造函数)。</strong></p>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><strong>重用现有类的功能，在此基础上进行扩展。</strong></p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p><strong>1.复用代码的一种方式。</strong></p>
-<p><strong>2.统一概念，以层次化的方式管理类。</strong></p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p><strong>耦合度高(父类改变，无需通知子类)。</strong></p>
-<p><img src="E:\核心类图.png" alt="核心类图"></p>
-<h3 id="适用性"><a href="#适用性" class="headerlink" title="适用性"></a>适用性</h3><p><strong>1.多个类具有相同的数据或行为。</strong></p>
-<p><strong>2.多个类从概念上是一致的，且需要进行统一处理。</strong></p>
-<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><p><strong>父类同一种动作或行为(父类型的引用调用同一方法)，在不同的子类上有不同的实现。</strong></p>
-<p><strong>继承将相关概念的共性进行抽象，并提供了一种复用的方式；多态在共性的基础上，体现类型以及行为的个性化，即同一个行为有多个不同的实现。</strong></p>
-<h3 id="实现手段"><a href="#实现手段" class="headerlink" title="实现手段"></a>实现手段</h3><p><strong>1.虚方法：父类型的引用 指向 子类的对象，调用虚方法，执行子类中的重写方法。</strong></p>
-<p><strong>2.抽象方法：抽象类的引用 指向 实现类的对象，调用抽象方法，执行实现类中重写方法。</strong></p>
-<p><strong>3.接口：接口的引用</strong></p>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="抽象类与接口的选择策略"><a href="#抽象类与接口的选择策略" class="headerlink" title="抽象类与接口的选择策略"></a>抽象类与接口的选择策略</h3><p><strong>抽象类与子类之间关系：是一种</strong></p>
-<p><strong>接口与实现类之间关系：能够做(功能)</strong></p>
-<h3 id="接口的显式实现"><a href="#接口的显式实现" class="headerlink" title="接口的显式实现"></a>接口的显式实现</h3><p><strong>作用：</strong></p>
-<p><strong>1.解决多接口实现时的二义性。</strong></p>
-<p><strong>2.解决接口中的成员对实现类不适用的问题。</strong></p>
-<h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3><p><strong>一组对外的行为规范，要求它的实现类必须遵循。</strong></p>
-<p><strong>只关注行为，不关注数据，且不关注行为的实现，实现由实现类完成。</strong></p>
-<h3 id="·Framework常用接口"><a href="#·Framework常用接口" class="headerlink" title="·Framework常用接口"></a>·Framework常用接口</h3><p><strong>IComparable 可比较，使类型支持比大小的功能。</strong></p>
-<p><strong>IComparer 比较器，提供比较的方法，常用于排序比较。</strong></p>
-<p><strong>IEnumerable可枚举，使类型支持简单迭代。</strong></p>
-<p><strong>IEnumerator枚举器，支持MoveNext，自己可以控制迭代的节奏。</strong></p>
-<h3 id="方法隐藏"><a href="#方法隐藏" class="headerlink" title="方法隐藏"></a>方法隐藏</h3><p><strong>定义：在子类中使用关键字修饰的与父类同签名的方法。</strong></p>
-<p><strong>作用：通过子类引用调用时，覆盖继承而来但不适用的旧方法，执行子类的新方法。</strong></p>
-<h3 id="隐藏原理"><a href="#隐藏原理" class="headerlink" title="隐藏原理"></a>隐藏原理</h3><p><strong>子类在方法表中增加一个新地址。</strong></p>
-<p><strong>所以通过子类引用调用时使用新纪录，执行子类中新方法。</strong></p>
-<p><strong>通过父类引用调用时使用旧记录，执行父类中方法。</strong></p>
-<h2 id="Unity协同程序"><a href="#Unity协同程序" class="headerlink" title="Unity协同程序"></a>Unity协同程序</h2><h3 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a>定义</h3><p><strong>具有多个返回点(yield)，可以在特定时机分部执行的函数。</strong></p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p><strong>Unity每帧处理GameObject中的协同函数，直到函数执行完毕。</strong></p>
-<h2 id="反射-ArrayHelper"><a href="#反射-ArrayHelper" class="headerlink" title="反射 ArrayHelper"></a>反射 ArrayHelper</h2><h3 id="定义-5"><a href="#定义-5" class="headerlink" title="定义"></a>定义</h3><p><strong>动态获取类型信息，动态创建对象，动态访问成员的过程。</strong></p>
-<h3 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a>作用</h3><p><strong>在编译时无法了解类型，在运行时获取类型信息，创建对象，访问成员。</strong></p>
-<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p><strong>1.得到数据类型</strong></p>
-<p><strong>2.动态创建对象</strong></p>
-<p><strong>3.查看类型信息(了解本身信息，成员信息)</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fakedsilence.github.io/2022/11/06/unity02/" data-id="clik6fmp40001b4u68a936zio" data-title="unity02" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="白日梦大师"><span class="site-name">白日梦大师</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">白日梦大师</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/11/06/unity02/" title="unity02">unity02</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-06T11:03:39.000Z" title="发表于 2022-11-06 19:03:39">2022-11-06</time></span></div><div class="content">面向对象 Object Oriented·概述面向过程的程序 &#x3D; 算法 + 数据结构； 关心解决问题的步骤！
+面向对象：关心谁在做什么。
+从设计角度讲：先有对象，再有类。 从编码角度讲：先有类，再有对象。
+**类 class 脚本 抽象的概念 “类别”**。
+对象 具体的实例 个体。
+·主要思想分而治之将一个大的需求分解为许多类，每个类处理一个独立的模块。
+拆分好处：独立模块便于分工，每个模块便于复用，可拓展性强。
+封装变化变化的地方独立封装，避免影响其他模块。
+高内聚类中的各个方法都在完成一项任务(单一职责的类)
+复杂的实现封装在内部，对外提供简单的调用。
+低耦合类与类的关联性依赖度要低(每个类独立)。
+让一个模块的改变，尽少影响其他模块。
+优势高复用性、高扩展性、高维护性、高移植性
+封装定义1.数据角度讲，将一些基本数据类型复合成一个自定义类型。
+2.方法角度讲，向类外提供功能，隐藏实现的细节。
+3.设计角度讲，分而治之，高耦合低内聚，封装变化。
+作用1.松散耦合，降低了程序各部分之间的依赖性。
+2.简化编程，使用者不必了解具体的实现细节，只需要调用对外提供的功能。
+3. ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/" title="数据结构与算法01">数据结构与算法01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-18T02:12:07.000Z" title="发表于 2022-09-18 10:12:07">2022-09-18</time></span></div><div class="content">数据结构与算法01链表什么是链表，链表是一种通过指针串联在一起的线性结构，每一个节点由两部分组成，一个是数据域，一个是指针域(存放指向下一个节点的指针)，最后一个节点的指针域指向null(空指针的意思)。
+链接的入口节点称为链表的头节点也就是head。
+如图所示：
 
 
 
-  
-    <article id="post-数据结构与算法01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/" class="article-date">
-  <time class="dt-published" datetime="2022-09-18T02:12:07.000Z" itemprop="datePublished">2022-09-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/">数据结构与算法01</a>
-    </h1>
-  
+链表的类型接下来说一下链表的几种类型：
+单链表：单链表中的指针域只能指向节点的下一个节点。
+双链表：每一个节点有两个指针域，一个指向下一个节点，一个指向上一个节点。
+双链表 既可以向前查询也可以向后查询。
+如图所示： 
+循环链表，顾名思义，就是链表首尾相连。
+循环链表可以用来解决约瑟夫环问题。
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="数据结构与算法01"><a href="#数据结构与算法01" class="headerlink" title="数据结构与算法01"></a>数据结构与算法01</h2><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>什么是链表，链表是一种通过指针串联在一起的线性结构，每一个节点由两部分组成，一个是<strong>数据域</strong>，一个是<strong>指针域</strong>(存放指向下一个节点的指针)，最后一个节点的指针域指向null(空指针的意思)。</p>
-<p>链接的入口节点称为链表的头节点也就是head。</p>
-<p>如图所示：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200806194529815.png" alt="链表1"></p>
-        
-          <p class="article-more-link">
-            <a href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fakedsilence.github.io/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/" data-id="clik6fmp50002b4u601q80r4l" data-title="数据结构与算法01" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+链表的存储方式了解完链表的类型，再来说一说链表在内存中的存储方式。
+数组是在内存中连续分布的，但是链表在内存中可不是连续分布的。
+链表是通过指针域的指针链接在内存中各个节点。
+所以链表中的节点在内存中不是连续分布的，而是散乱分布在内存的某地址上，分配机制取决于操作系统的内存管理。
 
-
-
-  
-    <article id="post-unity01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/17/unity01/" class="article-date">
-  <time class="dt-published" datetime="2022-09-17T08:24:20.000Z" itemprop="datePublished">2022-09-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/17/unity01/">unity01</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Unity随手记"><a href="#Unity随手记" class="headerlink" title="Unity随手记"></a>Unity随手记</h1><h3 id="虚函数的简单含义"><a href="#虚函数的简单含义" class="headerlink" title="虚函数的简单含义"></a>虚函数的简单含义</h3><p>在某基类中声明为virtual并在一个或多个派生类中被重新定义的成员函数，用法格式为：virtual 函数返回类型 函数名 (参数表) {函数体}; 实现多态性，通过指向派生类的基类指针或引用，访问派生类中同名覆盖成员函数。</p>
-<p>虚函数就是类中使用关键virtual修饰的成员函数，其目的是为了实现多态性。</p>
-<p>那什么是多态性呢？</p>
-<p>所谓<strong>多态性</strong>，顾名思义就是”多个性态”。更具体一点的就是，用一个名字定义多个函数，这些函数执行不同但相似的工作。最简单的多态性的实现方式就是<strong>函数重载</strong>和<strong>模板</strong>，这两种属于<strong>静态多态性</strong>。还有一种是<strong>动态多态性</strong>，其实现方式就是虚函数。</p>
-<h3 id="Rigidbody-velocity"><a href="#Rigidbody-velocity" class="headerlink" title="Rigidbody.velocity"></a>Rigidbody.velocity</h3><p>描述：刚体的速度矢量。它表示刚体位置的变化率。</p>
-<p>在大多数情况下，不应该直接修改速度，因为这可能导致行为失真-改用AddForce请勿在每个物理步骤中设置对象的速度，这将导致不真实的物理模拟。需要更改速度的一个典型用法是第一人称射击游戏中的跳跃动作设计，因为此时需要立即更改速度。</p>
-<p><strong>注意：.velocity 是世界空间属性。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Rigidbody-velocity.html">Rigidbody-velocity - Unity 脚本 API</a></p>
-<h3 id="Animator-SetFloat"><a href="#Animator-SetFloat" class="headerlink" title="Animator.SetFloat"></a>Animator.SetFloat</h3><p>public void <strong>SetFloat</strong> (string <strong>name</strong>, float <strong>value</strong>);</p>
-<p>public void <strong>SetFloat</strong> (string <strong>name</strong>, float <strong>value</strong>, float <strong>dampTime</strong>, float <strong>deltaTime</strong>);</p>
-<p>public void <strong>SetFloat</strong> (int <strong>id</strong>, float <strong>value</strong>);</p>
-<p>public void <strong>SetFloat</strong> (int <strong>id</strong>, float <strong>value</strong>, float <strong>dampTime</strong>, float <strong>deltaTime</strong>);</p>
-<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><table>
-<thead>
-<tr>
-<th>name</th>
-<th>参数名称。</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>参数 ID。</td>
-</tr>
-<tr>
-<td>value</td>
-<td>新的参数值。</td>
-</tr>
-<tr>
-<td>dampTime</td>
-<td>阻尼器总时间。</td>
-</tr>
-<tr>
-<td>deltaTime</td>
-<td>给予阻尼器的增量时间。</td>
-</tr>
-</tbody></table>
-<h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>将浮点值发送到动画器以影响过渡。</p>
-<p>在脚本中使用SetFloat将浮点值发送到动画器以激活过渡。在动画器中，定义哪些值如何影响某些动画的过渡方式。这在很多情况下都很有用，尤其是在动画循环中，例如在移动动画中可需要根据所施加的按钮压力来决定走或跑。</p>
-<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Animator.SetFloat.html">Animator-SetFloat - Unity 脚本 API</a></p>
-<h3 id="Input-GetAxisRaw"><a href="#Input-GetAxisRaw" class="headerlink" title="Input.GetAxisRaw"></a>Input.GetAxisRaw</h3><p>public static float GetAxisRaw(string axisName);</p>
-<h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>返回由axisName标识的虚拟轴的值(未应用平滑过滤)。</p>
-<p>对于键盘和游戏杆输入，该值将处于-1…1的范围内，由于未对输入进行平滑处理，键盘输入将始终未-1、0或1.如果您想自己完成键盘输入的所有平滑处理，这非常有用。</p>
-<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Input.GetAxisRaw.html">Input-GetAxisRaw - Unity 脚本 API</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fakedsilence.github.io/2022/09/17/unity01/" data-id="clik6fmp00000b4u6337ph8sa" data-title="unity01" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/11/06/unity02/">unity02</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/">数据结构与算法01</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/17/unity01/">unity01</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 白日梦大师<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+这个链表起始节点为2，终止节点为7，各个节点分布在内存中不同地址的空间上，通过指针串联在一起。
+链表的定义接下来说一说链表的定义。
+平时在刷Lee ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/09/17/unity01/" title="unity01">unity01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-17T08:24:20.000Z" title="发表于 2022-09-17 16:24:20">2022-09-17</time></span></div><div class="content">Unity随手记虚函数的简单含义在某基类中声明为virtual并在一个或多个派生类中被重新定义的成员函数，用法格式为：virtual 函数返回类型 函数名 (参数表) {函数体}; 实现多态性，通过指向派生类的基类指针或引用，访问派生类中同名覆盖成员函数。
+虚函数就是类中使用关键virtual修饰的成员函数，其目的是为了实现多态性。
+那什么是多态性呢？
+所谓多态性，顾名思义就是”多个性态”。更具体一点的就是，用一个名字定义多个函数，这些函数执行不同但相似的工作。最简单的多态性的实现方式就是函数重载和模板，这两种属于静态多态性。还有一种是动态多态性，其实现方式就是虚函数。
+Rigidbody.velocity描述：刚体的速度矢量。它表示刚体位置的变化率。
+在大多数情况下，不应该直接修改速度，因为这可能导致行为失真-改用AddForce请勿在每个物理步骤中设置对象的速度，这将导致不真实的物理模拟。需要更改速度的一个典型用法是第一人称射击游戏中的跳跃动作设计，因为此时需要立即更改速度。
+注意：.velocity 是世界空间属性。
+Rigidbody-velocity - Unity 脚本 A ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">白日梦大师</div><div class="author-info__description">这是描述</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/11/06/unity02/" title="unity02">unity02</a><time datetime="2022-11-06T11:03:39.000Z" title="发表于 2022-11-06 19:03:39">2022-11-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/" title="数据结构与算法01">数据结构与算法01</a><time datetime="2022-09-18T02:12:07.000Z" title="发表于 2022-09-18 10:12:07">2022-09-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/09/17/unity01/" title="unity01">unity01</a><time datetime="2022-09-17T08:24:20.000Z" title="发表于 2022-09-17 16:24:20">2022-09-17</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-06T13:05:47.403Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 白日梦大师</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
