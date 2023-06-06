@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>unity01 | 白日梦大师</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Unity随手记虚函数的简单含义在某基类中声明为virtual并在一个或多个派生类中被重新定义的成员函数，用法格式为：virtual 函数返回类型 函数名 (参数表) {函数体}; 实现多态性，通过指向派生类的基类指针或引用，访问派生类中同名覆盖成员函数。 虚函数就是类中使用关键virtual修饰的成员函数，其目的是为了实现多态性。 那什么是多态性呢？ 所谓多态性，顾名思义就是”多个性态”。更具体">
+<meta property="og:type" content="article">
+<meta property="og:title" content="unity01">
+<meta property="og:url" content="https://fakedsilence.github.io/2022/09/17/unity01/index.html">
+<meta property="og:site_name" content="白日梦大师">
+<meta property="og:description" content="Unity随手记虚函数的简单含义在某基类中声明为virtual并在一个或多个派生类中被重新定义的成员函数，用法格式为：virtual 函数返回类型 函数名 (参数表) {函数体}; 实现多态性，通过指向派生类的基类指针或引用，访问派生类中同名覆盖成员函数。 虚函数就是类中使用关键virtual修饰的成员函数，其目的是为了实现多态性。 那什么是多态性呢？ 所谓多态性，顾名思义就是”多个性态”。更具体">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-17T08:24:20.000Z">
+<meta property="article:modified_time" content="2022-09-17T13:59:24.897Z">
+<meta property="article:author" content="白日梦大师">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="白日梦大师" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">白日梦大师</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">这是副标题</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fakedsilence.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-unity01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/17/unity01/" class="article-date">
+  <time class="dt-published" datetime="2022-09-17T08:24:20.000Z" itemprop="datePublished">2022-09-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      unity01
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Unity随手记"><a href="#Unity随手记" class="headerlink" title="Unity随手记"></a>Unity随手记</h1><h3 id="虚函数的简单含义"><a href="#虚函数的简单含义" class="headerlink" title="虚函数的简单含义"></a>虚函数的简单含义</h3><p>在某基类中声明为virtual并在一个或多个派生类中被重新定义的成员函数，用法格式为：virtual 函数返回类型 函数名 (参数表) {函数体}; 实现多态性，通过指向派生类的基类指针或引用，访问派生类中同名覆盖成员函数。</p>
+<p>虚函数就是类中使用关键virtual修饰的成员函数，其目的是为了实现多态性。</p>
+<p>那什么是多态性呢？</p>
+<p>所谓<strong>多态性</strong>，顾名思义就是”多个性态”。更具体一点的就是，用一个名字定义多个函数，这些函数执行不同但相似的工作。最简单的多态性的实现方式就是<strong>函数重载</strong>和<strong>模板</strong>，这两种属于<strong>静态多态性</strong>。还有一种是<strong>动态多态性</strong>，其实现方式就是虚函数。</p>
+<h3 id="Rigidbody-velocity"><a href="#Rigidbody-velocity" class="headerlink" title="Rigidbody.velocity"></a>Rigidbody.velocity</h3><p>描述：刚体的速度矢量。它表示刚体位置的变化率。</p>
+<p>在大多数情况下，不应该直接修改速度，因为这可能导致行为失真-改用AddForce请勿在每个物理步骤中设置对象的速度，这将导致不真实的物理模拟。需要更改速度的一个典型用法是第一人称射击游戏中的跳跃动作设计，因为此时需要立即更改速度。</p>
+<p><strong>注意：.velocity 是世界空间属性。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Rigidbody-velocity.html">Rigidbody-velocity - Unity 脚本 API</a></p>
+<h3 id="Animator-SetFloat"><a href="#Animator-SetFloat" class="headerlink" title="Animator.SetFloat"></a>Animator.SetFloat</h3><p>public void <strong>SetFloat</strong> (string <strong>name</strong>, float <strong>value</strong>);</p>
+<p>public void <strong>SetFloat</strong> (string <strong>name</strong>, float <strong>value</strong>, float <strong>dampTime</strong>, float <strong>deltaTime</strong>);</p>
+<p>public void <strong>SetFloat</strong> (int <strong>id</strong>, float <strong>value</strong>);</p>
+<p>public void <strong>SetFloat</strong> (int <strong>id</strong>, float <strong>value</strong>, float <strong>dampTime</strong>, float <strong>deltaTime</strong>);</p>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><table>
+<thead>
+<tr>
+<th>name</th>
+<th>参数名称。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>参数 ID。</td>
+</tr>
+<tr>
+<td>value</td>
+<td>新的参数值。</td>
+</tr>
+<tr>
+<td>dampTime</td>
+<td>阻尼器总时间。</td>
+</tr>
+<tr>
+<td>deltaTime</td>
+<td>给予阻尼器的增量时间。</td>
+</tr>
+</tbody></table>
+<h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>将浮点值发送到动画器以影响过渡。</p>
+<p>在脚本中使用SetFloat将浮点值发送到动画器以激活过渡。在动画器中，定义哪些值如何影响某些动画的过渡方式。这在很多情况下都很有用，尤其是在动画循环中，例如在移动动画中可需要根据所施加的按钮压力来决定走或跑。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Animator.SetFloat.html">Animator-SetFloat - Unity 脚本 API</a></p>
+<h3 id="Input-GetAxisRaw"><a href="#Input-GetAxisRaw" class="headerlink" title="Input.GetAxisRaw"></a>Input.GetAxisRaw</h3><p>public static float GetAxisRaw(string axisName);</p>
+<h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>返回由axisName标识的虚拟轴的值(未应用平滑过滤)。</p>
+<p>对于键盘和游戏杆输入，该值将处于-1…1的范围内，由于未对输入进行平滑处理，键盘输入将始终未-1、0或1.如果您想自己完成键盘输入的所有平滑处理，这非常有用。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Input.GetAxisRaw.html">Input-GetAxisRaw - Unity 脚本 API</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fakedsilence.github.io/2022/09/17/unity01/" data-id="clik6fmp00000b4u6337ph8sa" data-title="unity01" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          数据结构与算法01
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/11/06/unity02/">unity02</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/">数据结构与算法01</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/17/unity01/">unity01</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 白日梦大师<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
