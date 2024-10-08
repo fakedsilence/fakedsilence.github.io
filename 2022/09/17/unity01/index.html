@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>unity01 | 白日梦大师</title><meta name="author" content="白日梦大师"><meta name="copyright" content="白日梦大师"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Unity随手记虚函数的简单含义在某基类中声明为virtual并在一个或多个派生类中被重新定义的成员函数，用法格式为：virtual 函数返回类型 函数名 (参数表) {函数体}; 实现多态性，通过指向派生类的基类指针或引用，访问派生类中同名覆盖成员函数。 虚函数就是类中使用关键virtual修饰的成员函数，其目的是为了实现多态性。 那什么是多态性呢？ 所谓多态性，顾名思义就是”多个性态”。更具体">
+<meta property="og:type" content="article">
+<meta property="og:title" content="unity01">
+<meta property="og:url" content="https://fakedsilence.github.io/2022/09/17/unity01/index.html">
+<meta property="og:site_name" content="白日梦大师">
+<meta property="og:description" content="Unity随手记虚函数的简单含义在某基类中声明为virtual并在一个或多个派生类中被重新定义的成员函数，用法格式为：virtual 函数返回类型 函数名 (参数表) {函数体}; 实现多态性，通过指向派生类的基类指针或引用，访问派生类中同名覆盖成员函数。 虚函数就是类中使用关键virtual修饰的成员函数，其目的是为了实现多态性。 那什么是多态性呢？ 所谓多态性，顾名思义就是”多个性态”。更具体">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fakedsilence.github.io/img/liukanshan.jpg">
+<meta property="article:published_time" content="2022-09-17T08:24:20.000Z">
+<meta property="article:modified_time" content="2024-06-21T01:38:28.494Z">
+<meta property="article:author" content="白日梦大师">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fakedsilence.github.io/img/liukanshan.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://fakedsilence.github.io/2022/09/17/unity01/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'unity01',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-21 09:38:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/liukanshan.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影评</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://source.fomal.cc/img/dm1.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="白日梦大师"><span class="site-name">白日梦大师</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影评</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">unity01</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-17T08:24:20.000Z" title="发表于 2022-09-17 16:24:20">2022-09-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-21T01:38:28.494Z" title="更新于 2024-06-21 09:38:28">2024-06-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="unity01"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Unity随手记"><a href="#Unity随手记" class="headerlink" title="Unity随手记"></a>Unity随手记</h1><h3 id="虚函数的简单含义"><a href="#虚函数的简单含义" class="headerlink" title="虚函数的简单含义"></a>虚函数的简单含义</h3><p>在某基类中声明为virtual并在一个或多个派生类中被重新定义的成员函数，用法格式为：virtual 函数返回类型 函数名 (参数表) {函数体}; 实现多态性，通过指向派生类的基类指针或引用，访问派生类中同名覆盖成员函数。</p>
+<p>虚函数就是类中使用关键virtual修饰的成员函数，其目的是为了实现多态性。</p>
+<p>那什么是多态性呢？</p>
+<p>所谓<strong>多态性</strong>，顾名思义就是”多个性态”。更具体一点的就是，用一个名字定义多个函数，这些函数执行不同但相似的工作。最简单的多态性的实现方式就是<strong>函数重载</strong>和<strong>模板</strong>，这两种属于<strong>静态多态性</strong>。还有一种是<strong>动态多态性</strong>，其实现方式就是虚函数。</p>
+<h3 id="Rigidbody-velocity"><a href="#Rigidbody-velocity" class="headerlink" title="Rigidbody.velocity"></a>Rigidbody.velocity</h3><p>描述：刚体的速度矢量。它表示刚体位置的变化率。</p>
+<p>在大多数情况下，不应该直接修改速度，因为这可能导致行为失真-改用AddForce请勿在每个物理步骤中设置对象的速度，这将导致不真实的物理模拟。需要更改速度的一个典型用法是第一人称射击游戏中的跳跃动作设计，因为此时需要立即更改速度。</p>
+<p><strong>注意：.velocity 是世界空间属性。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Rigidbody-velocity.html">Rigidbody-velocity - Unity 脚本 API</a></p>
+<h3 id="Animator-SetFloat"><a href="#Animator-SetFloat" class="headerlink" title="Animator.SetFloat"></a>Animator.SetFloat</h3><p>public void <strong>SetFloat</strong> (string <strong>name</strong>, float <strong>value</strong>);</p>
+<p>public void <strong>SetFloat</strong> (string <strong>name</strong>, float <strong>value</strong>, float <strong>dampTime</strong>, float <strong>deltaTime</strong>);</p>
+<p>public void <strong>SetFloat</strong> (int <strong>id</strong>, float <strong>value</strong>);</p>
+<p>public void <strong>SetFloat</strong> (int <strong>id</strong>, float <strong>value</strong>, float <strong>dampTime</strong>, float <strong>deltaTime</strong>);</p>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><table>
+<thead>
+<tr>
+<th>name</th>
+<th>参数名称。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>参数 ID。</td>
+</tr>
+<tr>
+<td>value</td>
+<td>新的参数值。</td>
+</tr>
+<tr>
+<td>dampTime</td>
+<td>阻尼器总时间。</td>
+</tr>
+<tr>
+<td>deltaTime</td>
+<td>给予阻尼器的增量时间。</td>
+</tr>
+</tbody></table>
+<h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>将浮点值发送到动画器以影响过渡。</p>
+<p>在脚本中使用SetFloat将浮点值发送到动画器以激活过渡。在动画器中，定义哪些值如何影响某些动画的过渡方式。这在很多情况下都很有用，尤其是在动画循环中，例如在移动动画中可需要根据所施加的按钮压力来决定走或跑。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/current/ScriptReference/Animator.SetFloat.html">Animator-SetFloat - Unity 脚本 API</a></p>
+<h3 id="Input-GetAxisRaw"><a href="#Input-GetAxisRaw" class="headerlink" title="Input.GetAxisRaw"></a>Input.GetAxisRaw</h3><p>public static float GetAxisRaw(string axisName);</p>
+<h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>返回由axisName标识的虚拟轴的值(未应用平滑过滤)。</p>
+<p>对于键盘和游戏杆输入，该值将处于-1…1的范围内，由于未对输入进行平滑处理，键盘输入将始终未-1、0或1.如果您想自己完成键盘输入的所有平滑处理，这非常有用。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/2019.4/ScriptReference/Input.GetAxisRaw.html">Input-GetAxisRaw - Unity 脚本 API</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://fakedsilence.github.io">白日梦大师</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://fakedsilence.github.io/2022/09/17/unity01/">https://fakedsilence.github.io/2022/09/17/unity01/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://fakedsilence.github.io" target="_blank">白日梦大师</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/liukanshan.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2022/09/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%9501/" title="数据结构与算法01"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数据结构与算法01</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/liukanshan.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">白日梦大师</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/fakedsilence" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Unity%E9%9A%8F%E6%89%8B%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">Unity随手记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E7%AE%80%E5%8D%95%E5%90%AB%E4%B9%89"><span class="toc-number">1.0.1.</span> <span class="toc-text">虚函数的简单含义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rigidbody-velocity"><span class="toc-number">1.0.2.</span> <span class="toc-text">Rigidbody.velocity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Animator-SetFloat"><span class="toc-number">1.0.3.</span> <span class="toc-text">Animator.SetFloat</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">1.0.3.1.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.3.2.</span> <span class="toc-text">描述</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Input-GetAxisRaw"><span class="toc-number">1.0.4.</span> <span class="toc-text">Input.GetAxisRaw</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">描述</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/08/%E4%BA%BA%E7%89%A9%E8%AE%BE%E8%AE%A1/" title="无题">无题</a><time datetime="2024-10-08T02:40:36.766Z" title="发表于 2024-10-08 10:40:36">2024-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/08/%E5%8F%AF%E4%BA%A4%E4%BA%92%E7%89%A9%E5%93%81/" title="无题">无题</a><time datetime="2024-10-08T02:40:36.765Z" title="发表于 2024-10-08 10:40:36">2024-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/08/%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85/" title="无题">无题</a><time datetime="2024-10-08T02:40:36.763Z" title="发表于 2024-10-08 10:40:36">2024-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/08/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/" title="无题">无题</a><time datetime="2024-10-08T02:40:36.762Z" title="发表于 2024-10-08 10:40:36">2024-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/21/unity03/" title="unity03">unity03</a><time datetime="2024-06-21T01:38:28.423Z" title="发表于 2024-06-21 09:38:28">2024-06-21</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://source.fomal.cc/img/dm1.webp')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By 白日梦大师</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer src="/live2d-widget/autoload.js"></script><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
